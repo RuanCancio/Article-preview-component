@@ -95,9 +95,10 @@ body {
     border-radius: 15px;
     transition: 0.3s ease;
     opacity: 0;
-    transform: translate(0px,-97px);
+    transform: translate(0px, -97px);
     width: 60%;
 }
+
 .share-box img {
     cursor: pointer;
 }
@@ -112,7 +113,8 @@ body {
     opacity: 1;
     pointer-events: auto;
 }
-.perfil button.ativo{
+
+.perfil button.ativo {
     background-color: #b8c0d1;
 
 }
@@ -138,6 +140,7 @@ body {
         flex: 1 1 300px;
         position: relative;
     }
+
     .share-box {
         bottom: 110px;
         right: 10px;

@@ -1,0 +1,155 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --fundo-principal: #ECF2F7;
+    --fundo-secao: #fff;
+    --texto-principal: 'Manrope', sans-serif;
+    --cor-2: #717F9A;
+    --cor-fundo-2: #49556A;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: var(--fundo-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--texto-principal);
+}
+
+#secao {
+    width: 60%;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.308);
+}
+
+.parte2 h1 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    padding: 20px 30px 20px 30px;
+    color: #67676d;
+}
+
+.parte2 p {
+    padding: 0px 30px 20px 30px;
+    font-size: 1rem;
+    color: #8C8D97;
+}
+
+.parte1>img {
+    width: 100%;
+    height: 250px;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.perfil {
+    margin: 1rem 2rem 1.5rem 30px;
+    display: flex;
+    align-items: center;
+}
+
+.perfil p {
+    padding-left: 10px;
+}
+
+.perfil img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.perfil button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-color: rgba(0, 0, 0, 0);
+    margin-left: 2rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.perfil button:hover {
+    border: 1px solid #717F9A;
+}
+
+.perfil button img {
+    width: 20px;
+    height: 20px;
+    color: var(--fundo-principal);
+}
+
+.share-box {
+    position: absolute;
+    background-color: var(--cor-fundo-2);
+    display: flex;
+    gap: 15px;
+    padding: 30px 15px;
+    align-items: center;
+    pointer-events: none;
+    border-radius: 15px;
+    transition: 0.3s ease;
+    opacity: 0;
+    transform: translate(0px,-97px);
+    width: 60%;
+}
+.share-box img {
+    cursor: pointer;
+}
+
+.share-box span {
+    letter-spacing: 5px;
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+.share-box.ativo {
+    opacity: 1;
+    pointer-events: auto;
+}
+.perfil button.ativo{
+    background-color: #b8c0d1;
+
+}
+
+@media screen and (min-width:900px) {
+    #secao {
+        display: flex;
+        flex-direction: row;
+        max-width: 900px;
+    }
+
+    .parte1 {
+        width: 400px;
+    }
+
+    .parte1 img {
+        height: 100%;
+        border-radius: 15px 0 0 15px;
+        object-fit: cover;
+    }
+
+    .parte2 {
+        flex: 1 1 300px;
+        position: relative;
+    }
+    .share-box {
+        bottom: 110px;
+        right: 10px;
+        transform: translate(0px, 0px);
+    }
+
+    .perfil p {
+        padding: 0px;
+        padding-left: 10px;
+    }
+
+    .perfil button {
+        margin-left: 10rem;
+    }
+}
